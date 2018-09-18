@@ -2,6 +2,21 @@
 {% block head %}
 <title>Home</title>
 {% endblock %}
+
 {% block body %}
-<h1>Home</h1>
+<div class="container">
+	<h1>Welcome Home {{current_user}}</h1>
+	<p>
+		<ul>
+			<!-- <li>Nome: {{current_user.displayname}}</li>
+			<li>CR: {{current_user.departmentnumber}}</li>
+			<li>Cpf: {{current_user.cpf}}</li>
+			<li>Empresa:{{current_user.empresa}}</li>
+			<li>Email: {{current_user.email}}</li>
+			<li>Matricula: {{current_user.matricula}}</li> -->
+			<br>
+			<a class="btn btn-primary" role="button" href="{% url 'login' %}">Logout</a>
+		</ul>
+	</p>
+</div>
 {% endblock %}
