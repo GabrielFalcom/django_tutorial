@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block head %}
+  <title> login </title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="wrapper">
+    <div id="login">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="login-logo" class="text-center">
+                    <img src="/static/projeto/img/algartelecom.png">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-default" type="submit">Login</button>
+                        <a href="https://trocadesenha/"
+                           target="_blank" class="btn btn-default">
+                        Esqueci minha senha </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="footer" ng-cloak>
+    <div class="text-center">
+        <div>© 2018 Algar Telecom</div>
+    </div>
+</div>
+{% endblock %}

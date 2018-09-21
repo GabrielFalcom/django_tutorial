@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet"
+    href="/static/projeto/external_ref/btsp/bootstrap-4.1.3-dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/projeto/external_ref/btsp/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
+    <br>
+    {% include 'navbar.html' %}
+    <br>
+    {% block head %}
+    <h1> Base </h1>
+    {% endblock %}
+  </head>
+  <br>
+  <body>
+    {% block body %}
+    <h1> Base </h1>
+    {% endblock %}
+  </body>
+</html>

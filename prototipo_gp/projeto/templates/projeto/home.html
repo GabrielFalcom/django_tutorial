@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<h1>Bem-vindo a Bordo {{current_user.userprofile.usuario}}</h1>
+    <br>
+	<p><strong> Puxa uma cadeira, pode levar algum tempo.
+                As coisas aqui estão em construção :)<br>
+                Mas da uma olhada em seus dados. Está tudo certo?<br>
+                Clique em Editar se precisar atualizar algo</strong><p>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <p>Nome: {{ current_user.userprofile.nome }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <p>Usuário de Rede: {{ current_user.userprofile.usuario }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <p>Cpf: {{ current_user.userprofile.cpf }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <p>Empresa: {{ current_user.userprofile.empresa }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <p>Matricula: {{ current_user.userprofile.matricula }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <p>Centro de Resultado: {{ current_user.userprofile.cr }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <p>Email: {{ current_user.userprofile.email }} </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <p>Telefone:  Eu ainda vou criar esse field xD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <a class="btn btn-primary" role="button" href="/projeto/perfil">Editar</a>
+</div>
+
+{% endblock %}
